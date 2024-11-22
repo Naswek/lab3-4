@@ -1,13 +1,14 @@
-package creature.animal;
+package creature.impl;
 
 import creature.ICartoonAnimal;
+import creature.AnimalAbstract;
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
 import exception.PlaceIsToHighExeption;
 
-public class Piglet extends AnimalAbstract implements ICartoonAnimal {
+public class Eeyore extends AnimalAbstract implements ICartoonAnimal {
 
-    public Piglet(
+    public Eeyore(
                   String creatureName,
                   Integer age,
                   LifeStatus lifeStatus,
@@ -29,37 +30,37 @@ public class Piglet extends AnimalAbstract implements ICartoonAnimal {
         );
     }
 
-    public void makePiggySounds(){
-        System.out.println("*звуки поросенка*");
+    public void makeDonkeySounds() {
+        System.out.println("*звуки осла*");
     }
 
-    public void riseSomeoneUp(String name, Double distance) throws PlaceIsToHighExeption {
+    public void riseSomeoneUp(double distance) throws PlaceIsToHighExeption {
 
         if (distance > 100) {
-            System.out.println(this.getCreatureName() + " поднял " + name);
+            System.out.println(this.getCreatureName() + " никого не поднимает :(");
         } else {
             throw new PlaceIsToHighExeption("Здесь слишком высоко, " + this.getCreatureName() + " не сможет забраться наверх!");
         }
     }
 
-    public Double getPigletWeight() {
-        return this.weight;
-    }
-
-    public Double getPigletStrength() {
+    public Double getEeyoreStrength() {
         return this.strength;
     }
 
-    public String getPigletName() {
+    public Double getEeyoreWeight() {
+        return this.weight;
+    }
+
+    public String getEeyoreName() {
         return this.getCreatureName();
     }
 
     @Override
     public boolean equals(Object object) {
 
-        if (object instanceof Piglet) {
-            Piglet p = (Piglet) object;
-            return (creatureName == p.creatureName && age == p.age);
+        if (object instanceof Eeyore) {
+            Eeyore e = (Eeyore) object;
+            return (creatureName == e.creatureName && age == e.age);
         }
         if (object == this) {
             return true;
@@ -77,7 +78,7 @@ public class Piglet extends AnimalAbstract implements ICartoonAnimal {
 
     @Override
     public String toString() {
-        return ("This Piglet: "
+        return ("This Eeyore: "
                 + "Name: " + this.creatureName
                 + "Age: " + this.age
                 + "LifeStatus: " + this.lifeStatus);

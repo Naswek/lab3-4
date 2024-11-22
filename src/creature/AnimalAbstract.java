@@ -1,8 +1,7 @@
-package creature.animal;
+package creature;
 
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
-import creature.CreatureAbstract;
 
 import java.util.Random;
 

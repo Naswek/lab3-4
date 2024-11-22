@@ -1,8 +1,9 @@
-package creature.god;
+package creature.impl;
 
 import creature.enumeration.LifeStatus;
 import creature.enumeration.GodType;
 import creature.Hammer;
+import creature.god.GodAbstract;
 
 public class Thor extends GodAbstract implements Hammer {
 

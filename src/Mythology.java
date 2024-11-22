@@ -1,14 +1,14 @@
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
 import exception.PlaceIsToHighExeption;
-import creature.animal.Eeyore;
-import creature.animal.Piglet;
-import creature.animal.Tigger;
-import creature.animal.WinnieThePooh;
+import creature.impl.Eeyore;
+import creature.impl.Piglet;
+import creature.impl.Tigger;
+import creature.impl.WinnieThePooh;
 import creature.enumeration.GodType;
-import creature.god.Freyja;
+import creature.impl.Freyja;
 import creature.god.GojoSatoru;
-import creature.god.Thor;
+import creature.impl.Thor;
 import creature.human.ChristopherRobin;
 import place.enumeration.World;
 import place.sanctuary.ElvenSanctuary;
@@ -65,9 +65,9 @@ public class Mythology {
                 42.4,
                 24.7,
                 LifeStatus.ALIVE
-    );
+        );
 
-                //gods
+        //gods
         GojoSatoru gojoSatoru = new GojoSatoru(
                 "Сатору Годжо",
                 28,
@@ -80,6 +80,7 @@ public class Mythology {
                 10000,
                 "Особый ранг",
                 25879
+
         );
         Thor thor = new Thor(
                 "Тор",
@@ -89,6 +90,7 @@ public class Mythology {
                 "В браке с Сиф",
                 "Гром и молния",
                 GodType.ASGARDS
+
         );
         Freyja freyja = new Freyja(
                 "Фрея",

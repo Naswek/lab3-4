@@ -1,13 +1,14 @@
-package creature.animal;
+package creature.impl;
 
 import creature.ICartoonAnimal;
+import creature.AnimalAbstract;
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
 import exception.PlaceIsToHighExeption;
 
-public class Eeyore extends AnimalAbstract implements ICartoonAnimal {
+public class Tigger extends AnimalAbstract implements ICartoonAnimal {
 
-    public Eeyore(
+    public Tigger(
                   String creatureName,
                   Integer age,
                   LifeStatus lifeStatus,
@@ -29,37 +30,41 @@ public class Eeyore extends AnimalAbstract implements ICartoonAnimal {
         );
     }
 
-    public void makeDonkeySounds() {
-        System.out.println("*звуки осла*");
+    public void makeTigerSounds(){
+        System.out.println("*звуки тигра*");
     }
 
-    public void riseSomeoneUp(double distance) throws PlaceIsToHighExeption {
+    public void riseSomeoneUp(String name, double distance) throws PlaceIsToHighExeption {
 
         if (distance > 100) {
-            System.out.println(this.getCreatureName() + " никого не поднимает :(");
+            System.out.println(this.getCreatureName()
+                    + " поднял "
+                    + name);
         } else {
-            throw new PlaceIsToHighExeption("Здесь слишком высоко, " + this.getCreatureName() + " не сможет забраться наверх!");
+            throw new PlaceIsToHighExeption("Здесь слишком высоко, "
+                    + this.getCreatureName()
+                    + " не сможет забраться наверх!");
         }
     }
 
-    public Double getEeyoreStrength() {
-        return this.strength;
-    }
-
-    public Double getEeyoreWeight() {
+    public Double getTiggerWeight() {
         return this.weight;
     }
 
-    public String getEeyoreName() {
+    public Double getTiggerStrength() {
+        return this.strength;
+    }
+
+    public String getTiggerName() {
         return this.getCreatureName();
     }
 
     @Override
     public boolean equals(Object object) {
 
-        if (object instanceof Eeyore) {
-            Eeyore e = (Eeyore) object;
-            return (creatureName == e.creatureName && age == e.age);
+        if (object instanceof Tigger) {
+            Tigger t = (Tigger) object;
+            return (creatureName == t.creatureName && age == t.age);
         }
         if (object == this) {
             return true;
@@ -77,7 +82,7 @@ public class Eeyore extends AnimalAbstract implements ICartoonAnimal {
 
     @Override
     public String toString() {
-        return ("This Eeyore: "
+        return ("This Tiger: "
                 + "Name: " + this.creatureName
                 + "Age: " + this.age
                 + "LifeStatus: " + this.lifeStatus);

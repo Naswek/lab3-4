@@ -5,44 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
-      <change afterPath="$PROJECT_DIR$/src/creature/enumeration/FriendlinessStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/creature/enumeration/LifeStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IMythology.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/MythologyObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MythologyObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/Creature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/CreatureAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/CreatureAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/LifeStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/PlaceIsToHighExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/PlaceIsToHighExeption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/SomeoneUseCheatsExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exception/SomeoneUseCheatsExeption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/animal/AnimalAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/FriendlinessStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/cartoonAnimal/CartoonAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/ICartoonAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/cartoonAnimal/Eeyore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/animal/Eeyore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/cartoonAnimal/Piglet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/animal/Piglet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/cartoonAnimal/Tigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/animal/Tigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/animal/cartoonAnimal/WinnieThePooh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/animal/WinnieThePooh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/God.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/GodAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/GodType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/enumeration/GodType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/freyja/Freyja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/Freyja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/freyja/Kindness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/Kindness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/gojoSatoru/GojoSatoru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/GojoSatoru.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/thor/Hammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/Hammer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/thor/Thor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/Thor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/god/thor/ThorsChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/ThorsChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/human/HumanAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/human/christopherRobin/ChristopherRobin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/human/ChristopherRobin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/monster/MonsterAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/creature/monster/pudge/Pudge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/monster/Pudge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/PlaceAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/PlaceAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/enumeration/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/sanctuary/Sanctuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/SanctuaryAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/sanctuary/elvenSanctuary/ElvenSanctuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/ElvenSanctuary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/ShopAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/shop/gnomesShop/Gnome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/enumeration/Gnome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/shop/gnomesShop/GnomesShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/GnomesShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mythology/place/shop/gnomesShop/Prices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/Prices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +18,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
         <option value="Exception" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -124,7 +89,7 @@
       <workItem from="1732198498613" duration="40674000" />
       <workItem from="1732282792570" duration="1001000" />
       <workItem from="1732284176690" duration="2139000" />
-      <workItem from="1732288161840" duration="6623000" />
+      <workItem from="1732288161840" duration="7586000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -142,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731851871117</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1732295364232</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732295364232</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
