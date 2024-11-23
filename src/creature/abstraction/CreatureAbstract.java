@@ -1,5 +1,6 @@
-package creature;
+package creature.abstraction;
 
+import creature.Creature;
 import creature.enumeration.LifeStatus;
 
 public class CreatureAbstract implements Creature {

@@ -1,7 +1,6 @@
-package creature.human;
+package creature.abstraction;
 
 import creature.enumeration.LifeStatus;
-import creature.CreatureAbstract;
 
 public abstract class HumanAbstract extends CreatureAbstract {
 

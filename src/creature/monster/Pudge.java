@@ -1,5 +1,6 @@
 package creature.monster;
 
+import creature.abstraction.MonsterAbstract;
 import creature.enumeration.LifeStatus;
 import place.enumeration.World;
 

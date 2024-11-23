@@ -1,4 +1,4 @@
-package creature;
+package creature.abstraction;
 
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
@@ -61,8 +61,7 @@ public abstract class AnimalAbstract extends CreatureAbstract {
 
     protected int getRandomChance(){
         Random random = new Random();
-        int chance = random.nextInt(11);
-        return chance;
+        return random.nextInt(11);
     }
 
     public void protect() {

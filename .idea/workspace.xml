@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
-      <change afterPath="$PROJECT_DIR$/src/IMythology.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IMythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IMythology.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <workItem from="1732198498613" duration="40674000" />
       <workItem from="1732282792570" duration="1001000" />
       <workItem from="1732284176690" duration="2139000" />
-      <workItem from="1732288161840" duration="7586000" />
+      <workItem from="1732288161840" duration="8961000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -115,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732295364232</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1732296342865</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732296342865</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

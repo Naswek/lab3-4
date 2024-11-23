@@ -1,7 +1,7 @@
 package creature.impl;
 
 import creature.ICartoonAnimal;
-import creature.AnimalAbstract;
+import creature.abstraction.AnimalAbstract;
 import creature.enumeration.FriendlinessStatus;
 import creature.enumeration.LifeStatus;
 import exception.PlaceIsToHighExeption;

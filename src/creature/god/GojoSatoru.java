@@ -1,5 +1,6 @@
 package creature.god;
 
+import creature.abstraction.GodAbstract;
 import creature.enumeration.LifeStatus;
 import creature.enumeration.GodType;
 

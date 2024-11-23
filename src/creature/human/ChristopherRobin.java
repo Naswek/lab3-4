@@ -1,5 +1,6 @@
 package creature.human;
 
+import creature.abstraction.HumanAbstract;
 import creature.enumeration.LifeStatus;
 import exception.PlaceIsToHighExeption;
 
