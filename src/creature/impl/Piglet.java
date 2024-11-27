@@ -58,8 +58,7 @@ public class Piglet extends AnimalAbstract implements ICartoonAnimal {
     @Override
     public boolean equals(Object object) {
 
-        if (object instanceof Piglet) {
-            Piglet p = (Piglet) object;
+        if (object instanceof Piglet p) {
             return (creatureName == p.creatureName && age == p.age);
         }
         if (object == this) {

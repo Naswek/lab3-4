@@ -35,12 +35,10 @@ public abstract class HumanAbstract extends CreatureAbstract {
     }
 
     public void play(){
-
+        System.out.println(this.getCreatureName() + " играет в доту :)");
     }
 
-    public void grow() {}
-
-    public void hardWork() {}
-
-    public void talkTo() {}
+    public void hardWork() {
+        System.out.println(this.getCreatureName() + " тяжело работает... ");
+    }
 }

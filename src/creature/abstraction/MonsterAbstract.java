@@ -31,6 +31,7 @@ public abstract class MonsterAbstract extends CreatureAbstract {
             lifeStatus
         );
         this.killsCount = killsCount;
+        this.world = world;
     }
 
     public void destroyEverything(){

@@ -27,6 +27,7 @@ public abstract class GodAbstract extends CreatureAbstract {
         this.childsCount = childsCount;
         this.marriage = marriage;
         this.specialization = specialization;
+        this.godType = godType;
     }
 
     protected void getMarriage() {

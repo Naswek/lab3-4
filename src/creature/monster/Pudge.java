@@ -30,20 +30,17 @@ public class Pudge extends MonsterAbstract {
     }
 
     public void PudgeIsEating() {
-
         System.out.println("Мммм.... свежее мясо");
         weight = weight + 0.5;
         hungerLevel = hungerLevel - 1;
     }
 
     public void PudgeIsHungry() {
-
         System.out.println("Тушку мне!");
         hungerLevel = hungerLevel + 1;
     }
 
     public void hungerLevelTooHigh(){
-
         if (hungerLevel > 10){
             destroyEverything();
             killEveryone();

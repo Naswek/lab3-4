@@ -26,7 +26,8 @@ public class Mythology {
                 "Осел",
                 "Серый",
                 48.9,
-                FriendlinessStatus.FRIENDLY);
+                FriendlinessStatus.FRIENDLY
+        );
 
         Piglet piglet = new Piglet(
                 "Пятачок",
@@ -35,7 +36,8 @@ public class Mythology {
                 "Поросенок",
                 "Розовый",
                 27.1,
-                FriendlinessStatus.FRIENDLY);
+                FriendlinessStatus.FRIENDLY
+        );
 
         WinnieThePooh winnieThePooh = new WinnieThePooh(
                 "Винни Пух",
@@ -44,7 +46,8 @@ public class Mythology {
                 "Медведь",
                 "Желтый",
                 58.4,
-                FriendlinessStatus.FRIENDLY);
+                FriendlinessStatus.FRIENDLY
+        );
 
         Tigger tigger = new Tigger(
                 "Тигра",
@@ -120,6 +123,17 @@ public class Mythology {
                 "Молитва к Свету",
                 "Не молиться Тьме"
         );
+
+
+        String[] characters = new String[] {
+                christopherRobin.getChristopherRobinName(),
+                winnieThePooh.getWinniesName(),
+                piglet.getPigletName(),
+                tigger.getTiggerName(),
+                eeyore.getEeyoreName()
+
+        };
+
 
 
         if (christopherRobin.getChristopherStrength() < winnieThePooh.getWinnieWeight()) {

@@ -58,8 +58,7 @@ public class Eeyore extends AnimalAbstract implements ICartoonAnimal {
     @Override
     public boolean equals(Object object) {
 
-        if (object instanceof Eeyore) {
-            Eeyore e = (Eeyore) object;
+        if (object instanceof Eeyore e) {
             return (creatureName == e.creatureName && age == e.age);
         }
         if (object == this) {

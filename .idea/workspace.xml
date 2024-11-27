@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IMythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IMythology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/GodAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/GodAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/HumanAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/HumanAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/impl/Piglet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Piglet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/monster/Pudge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/monster/Pudge.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +59,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mythology.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -88,7 +95,9 @@
       <workItem from="1732198498613" duration="40674000" />
       <workItem from="1732282792570" duration="1001000" />
       <workItem from="1732284176690" duration="2139000" />
-      <workItem from="1732288161840" duration="8961000" />
+      <workItem from="1732288161840" duration="14457000" />
+      <workItem from="1732397321228" duration="2000" />
+      <workItem from="1732471366321" duration="98000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -122,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732296342865</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1732386391091</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732386391091</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
