@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/GodAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/GodAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/HumanAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/HumanAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/god/GojoSatoru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/GojoSatoru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/human/ChristopherRobin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/human/ChristopherRobin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creature/impl/Piglet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Piglet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/creature/impl/WinnieThePooh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/WinnieThePooh.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creature/monster/Pudge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/monster/Pudge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/PlaceAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/PlaceAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/enumeration/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/enumeration/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/sanctuary/ElvenSanctuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/ElvenSanctuary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/sanctuary/SanctuaryAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/SanctuaryAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/shop/GnomesShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/GnomesShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/place/shop/ShopAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/ShopAbstract.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +41,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Exception" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,23 +74,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Mythology.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/lab3-4/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Client (1).executor": "Run",
+    "Application.Client.executor": "Debug",
+    "Application.Main.executor": "Run",
+    "Application.Mythology.executor": "Run",
+    "Application.Server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/Downloads/apache-log4j-2.24.2-bin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/lab3-4/Client/Mythology/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\lab3-4\Client\Mythology\src" />
+      <recent name="C:\Users\user\IdeaProjects\lab3-4\Client\Mythology" />
+      <recent name="C:\Users\user\IdeaProjects\lab3-4\Client" />
+      <recent name="C:\Users\user\IdeaProjects\lab3-4\src" />
+      <recent name="C:\Users\user\IdeaProjects\lab3-4\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client (1)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mythology" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Mythology" />
+      <module name="Mythology" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server" />
+      <module name="Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Client (1)" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Mythology" />
+      <item itemvalue="Application.Server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Mythology" />
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,6 +174,20 @@
       <workItem from="1732288161840" duration="14457000" />
       <workItem from="1732397321228" duration="2000" />
       <workItem from="1732471366321" duration="98000" />
+      <workItem from="1732727655587" duration="879000" />
+      <workItem from="1732740300278" duration="170000" />
+      <workItem from="1732809649096" duration="1135000" />
+      <workItem from="1732826188841" duration="2582000" />
+      <workItem from="1732883729908" duration="4351000" />
+      <workItem from="1733077647783" duration="3000" />
+      <workItem from="1733077770683" duration="4000" />
+      <workItem from="1733158724724" duration="2222000" />
+      <workItem from="1733161532803" duration="11986000" />
+      <workItem from="1733203948012" duration="3791000" />
+      <workItem from="1733209139890" duration="3330000" />
+      <workItem from="1733234737377" duration="8659000" />
+      <workItem from="1733427073335" duration="14496000" />
+      <workItem from="1733469116332" duration="20643000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -139,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732386391091</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1732727873829</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732727873829</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,5 +246,53 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab3-4" />
     <option name="LAST_COMMIT_MESSAGE" value="lab3-4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.SocketException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/Server.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/maven/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Client/Mythology/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Client/Mythology/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Client/src/Client.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Client/src/Client.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab3_4$Client.ic" NAME="Client Coverage Results" MODIFIED="1733477102811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
