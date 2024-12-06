@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mythology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/abstraction/MonsterAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/god/GojoSatoru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/god/GojoSatoru.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/human/ChristopherRobin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/human/ChristopherRobin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Eeyore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/impl/Piglet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/Piglet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/impl/WinnieThePooh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/impl/WinnieThePooh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creature/monster/Pudge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/monster/Pudge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/PlaceAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/PlaceAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/enumeration/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/creature/enumeration/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/sanctuary/ElvenSanctuary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/ElvenSanctuary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/sanctuary/SanctuaryAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/sanctuary/SanctuaryAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/shop/GnomesShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/GnomesShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/place/shop/ShopAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/place/shop/ShopAbstract.java" afterDir="false" />
-    </list>
+    <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,12 +50,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Client (1).executor": "Run",
-    "Application.Client.executor": "Debug",
+    "Application.Client.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Mythology.executor": "Run",
     "Application.Server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/user/Downloads/apache-log4j-2.24.2-bin",
     "node.js.detected.package.eslint": "true",
@@ -187,7 +161,7 @@
       <workItem from="1733209139890" duration="3330000" />
       <workItem from="1733234737377" duration="8659000" />
       <workItem from="1733427073335" duration="14496000" />
-      <workItem from="1733469116332" duration="20643000" />
+      <workItem from="1733469116332" duration="21043000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -237,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732727873829</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1733491994381</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733491994381</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,16 +260,6 @@
           <url>file://$PROJECT_DIR$/Client/Mythology/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Client/src/Client.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Client/src/Client.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
