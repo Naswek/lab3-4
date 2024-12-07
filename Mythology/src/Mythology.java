@@ -183,7 +183,7 @@ public class Mythology {
         System.out.println("После вместе они достигли"
                 + elvenSanctuary.getSanctuaryName()
                 + " и спаслись!"
-                + " а теперь вермнеся к бою..."
+                + " а теперь вернемся к бою..."
         );
 
         System.out.println(gojoSatoru.getGojoSatoruName()

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4" />
+    <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
+      <change afterPath="$PROJECT_DIR$/Client/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mythology/src/IMythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/IMythology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mythology/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/Mythology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,30 +57,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Client (1).executor": "Run",
-    "Application.Client.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Mythology.executor": "Run",
-    "Application.Server.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Downloads/apache-log4j-2.24.2-bin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/lab3-4/Client/Mythology/src/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Client (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mythology.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Downloads/apache-log4j-2.24.2-bin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/lab3-4/Client/Mythology/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\lab3-4\Client\Mythology\src" />
@@ -118,8 +129,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Mythology" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Mythology" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +172,8 @@
       <workItem from="1733209139890" duration="3330000" />
       <workItem from="1733234737377" duration="8659000" />
       <workItem from="1733427073335" duration="14496000" />
-      <workItem from="1733469116332" duration="21424000" />
+      <workItem from="1733469116332" duration="31292000" />
+      <workItem from="1733583474573" duration="463000" />
     </task>
     <task id="LOCAL-00001" summary="lab3-4">
       <option name="closed" value="true" />
@@ -227,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733492133582</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="lab3-4">
+      <option name="closed" value="true" />
+      <created>1733492466723</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733492466723</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,11 +264,6 @@
           <properties class="java.net.SocketException" package="java.net" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Server/src/Server.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/maven/src/main/java/org/example/Main.java</url>
           <line>13</line>

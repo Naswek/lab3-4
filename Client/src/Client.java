@@ -12,14 +12,20 @@ public class Client {
         try(
                 Socket socket = new Socket(host, port);
                 PrintWriter out = new PrintWriter(
-                        socket.getOutputStream(), true);
+                        socket.getOutputStream(), true
+                );
                 BufferedReader inConsole = new BufferedReader(
-                        new InputStreamReader(System.in));
+                        new InputStreamReader(System.in)
+                );
                 BufferedReader in = new BufferedReader(
-                        new InputStreamReader(socket.getInputStream()));
-                ){
-
-             System.out.println("Подключён к серверу: " + host + ":" + port);
+                        new InputStreamReader(socket.getInputStream())
+                );
+        ){
+             System.out.println("Подключён к серверу: "
+                     + host
+                     + ":"
+                     + port
+             );
              outer: while (true) {
                 System.out.println("Введите 1, если хотите написать "
                         + "номера предложений ручками и 2, "
@@ -33,13 +39,15 @@ public class Client {
                  }
 
                     //input
-                if (userInput.equals("1")) {
+                if (userInput.equals("help")) {
                     System.out.println("Введите цифры предложений");
                     while (true) {
                         userInput = inConsole.readLine();
+
                         if (userInput.equals("exit")) {
                             System.out.println("Бай-бай!");
                             break outer;
+
                         } else {
                             out.println(userInput);
                             System.out.println(in.readLine());
@@ -49,16 +57,19 @@ public class Client {
                     //script
                 } else if (userInput.equals("2")) {
                     System.out.println("Одну секунду...");
-                        try (BufferedReader fileReader = new BufferedReader(new FileReader("text.txt"));
+
+                        try (BufferedReader fileReader = new BufferedReader(
+                                new FileReader("text.txt"));
                                 ) {
                             String sentenceNumber;
+
                             while ((sentenceNumber = fileReader.readLine()) != null) {
                                 out.println(sentenceNumber);
                                 System.out.println(in.readLine());
                         }
                     } catch (FileNotFoundException e) {
                             System.out.println("Файла нет :/");
-                        }
+                    }
                 }
             }
         }
@@ -66,3 +77,4 @@ public class Client {
 }
 
 
+//streamAPI

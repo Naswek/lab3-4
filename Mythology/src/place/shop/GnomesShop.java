@@ -9,11 +9,11 @@ public class GnomesShop extends ShopAbstract {
         super(namePlace, World.SVARTALHEIM, dangerous, timeOpen, timeClose, shopSpeciality);
     }
 
-    protected void sellWeapon(){
+    public void sellWeapon(){
         System.out.println(this.getNamePlace() + "продает оружие");
     }
 
-    protected void sellSomethingElse(){
+    public void sellSomethingElse(){
         System.out.println(this.getNamePlace() + "продает" + this.shopSpeciality);
     }
 }
