@@ -1,0 +1,179 @@
+Index: Mythology/src/creature/god/ThorsChild.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package creature.god;\r\n\r\npublic record ThorsChild() {\r\n    protected static String childName;\r\n    protected static int childAge;\r\n    protected static String weapon;\r\n    protected static String mother;\r\n    protected static double strength;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mythology/src/creature/god/ThorsChild.java b/Mythology/src/creature/god/ThorsChild.java
+--- a/Mythology/src/creature/god/ThorsChild.java	(revision 18882aaaa68fe2d1a2ae726e2ebd6ea7555e5c27)
++++ b/Mythology/src/creature/god/ThorsChild.java	(date 1737296863325)
+@@ -1,10 +1,10 @@
+ package creature.god;
+ 
+ public record ThorsChild() {
+-    protected static String childName;
+-    protected static int childAge;
+-    protected static String weapon;
+-    protected static String mother;
+-    protected static double strength;
++    private static String childName;
++    private static int childAge;
++    private static String weapon;
++    private static String mother;
++    private static double strength;
+ 
+ }
+Index: Client/src/Client.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.*;\r\nimport java.net.Socket;\r\n\r\n\r\npublic class Client {\r\n    public static void main(String[] args) throws IOException {\r\n\r\n        String host = \"localhost\";\r\n        int port = 2525;\r\n        String userInput;\r\n\r\n        try(\r\n                Socket socket = new Socket(host, port);\r\n                PrintWriter out = new PrintWriter(\r\n                        socket.getOutputStream(), true\r\n                );\r\n                BufferedReader inConsole = new BufferedReader(\r\n                        new InputStreamReader(System.in)\r\n                );\r\n                BufferedReader in = new BufferedReader(\r\n                        new InputStreamReader(socket.getInputStream())\r\n                );\r\n        ){\r\n             System.out.println(\"Подключён к серверу: \"\r\n                     + host\r\n                     + \":\"\r\n                     + port\r\n             );\r\n             outer: while (true) {\r\n                System.out.println(\"Введите 1, если хотите написать \"\r\n                        + \"номера предложений ручками и 2, \"\r\n                        + \"если хотите закинуть файлик\");\r\n\r\n                 userInput = inConsole.readLine();\r\n\r\n                 if (userInput.equals(\"exit\")) {\r\n                     System.out.println(\"Бай-бай!\");\r\n                     break;\r\n                 }\r\n\r\n                    //input\r\n                if (userInput.equals(\"help\")) {\r\n                    System.out.println(\"Введите цифры предложений\");\r\n                    while (true) {\r\n                        userInput = inConsole.readLine();\r\n\r\n                        if (userInput.equals(\"exit\")) {\r\n                            System.out.println(\"Бай-бай!\");\r\n                            break outer;\r\n\r\n                        } else {\r\n                            out.println(userInput);\r\n                            System.out.println(in.readLine());\r\n                        }\r\n                    }\r\n\r\n                    //script\r\n                } else if (userInput.equals(\"2\")) {\r\n                    System.out.println(\"Одну секунду...\");\r\n\r\n                        try (BufferedReader fileReader = new BufferedReader(\r\n                                new FileReader(\"text.txt\"));\r\n                                ) {\r\n                            String sentenceNumber;\r\n\r\n                            while ((sentenceNumber = fileReader.readLine()) != null) {\r\n                                out.println(sentenceNumber);\r\n                                System.out.println(in.readLine());\r\n                        }\r\n                    } catch (FileNotFoundException e) {\r\n                            System.out.println(\"Файла нет :/\");\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n\r\n//streamAPI
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Client/src/Client.java b/Client/src/Client.java
+--- a/Client/src/Client.java	(revision 18882aaaa68fe2d1a2ae726e2ebd6ea7555e5c27)
++++ b/Client/src/Client.java	(date 1734705718173)
+@@ -39,7 +39,7 @@
+                  }
+ 
+                     //input
+-                if (userInput.equals("help")) {
++                if (userInput.equals("1")) {
+                     System.out.println("Введите цифры предложений");
+                     while (true) {
+                         userInput = inConsole.readLine();
+Index: Mythology/src/Mythology.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import creature.enumeration.FriendlinessStatus;\r\nimport creature.enumeration.LifeStatus;\r\nimport creature.monster.Pudge;\r\nimport exception.PlaceIsToHighExeption;\r\nimport creature.impl.Piglet;\r\nimport creature.impl.Tigger;\r\nimport creature.impl.WinnieThePooh;\r\nimport creature.enumeration.GodType;\r\nimport creature.impl.Freyja;\r\nimport creature.god.GojoSatoru;\r\nimport creature.impl.Thor;\r\nimport creature.human.ChristopherRobin;\r\nimport creature.enumeration.World;\r\nimport place.sanctuary.ElvenSanctuary;\r\nimport place.shop.GnomesShop;\r\n\r\nimport java.io.PrintStream;\r\n\r\nimport  org.apache.logging.log4j.LogManager;\r\nimport org.apache.logging.log4j.Logger;\r\n\r\n\r\npublic class Mythology {\r\n\r\n    private static final Logger logger = LogManager.getLogger(Mythology.class);\r\n\r\n    public static void main(String[] args) throws PlaceIsToHighExeption {\r\n\r\n\r\n        System.setOut(new PrintStream(System.out) {\r\n            @Override\r\n            public void println(String s) {\r\n                logger.info(s);\r\n            }\r\n        });\r\n\r\n        System.setErr(new PrintStream(System.err) {\r\n            @Override\r\n            public void println(String s) {\r\n                logger.error(s);\r\n            }\r\n        });\r\n\r\n        //animals\r\n        Piglet piglet = new Piglet(\r\n                \"Пятачок\",\r\n                98,\r\n                LifeStatus.ALIVE,\r\n                28.7,\r\n                \"Поросёнок\",\r\n                \"Розовый\",\r\n                36.7,\r\n                FriendlinessStatus.FRIENDLY\r\n        );\r\n\r\n        WinnieThePooh winnieThePooh = new WinnieThePooh(\r\n                \"Винни Пух\",\r\n                98,\r\n                LifeStatus.ALIVE,\r\n                69.2,\r\n                \"Медведь\",\r\n                \"Желтый\",\r\n                58.4,\r\n                FriendlinessStatus.FRIENDLY\r\n        );\r\n\r\n        Tigger tigger = new Tigger(\r\n                \"Тигра\",\r\n                96,\r\n                LifeStatus.ALIVE,\r\n                47.6,\r\n                \"Тигр\",\r\n                \"Оранжево-черный\",\r\n                34.5,\r\n                FriendlinessStatus.FRIENDLY\r\n        );\r\n\r\n        //people\r\n        ChristopherRobin christopherRobin = new ChristopherRobin(\r\n                \"Кристофер Робин\",\r\n                98,\r\n                \"Мальчик\",\r\n                147.5,\r\n                42.4,\r\n                24.7,\r\n                LifeStatus.ALIVE\r\n        );\r\n\r\n        //gods\r\n        GojoSatoru gojoSatoru = new GojoSatoru(\r\n                \"Сатору Годжо\",\r\n                28,\r\n                LifeStatus.ALIVE,\r\n                0,\r\n                \"Не в браке\",\r\n                \"Маг\",\r\n                GodType.OTHER,\r\n                \"Шесть глаз\",\r\n                10000,\r\n                \"Особый ранг\",\r\n                25879\r\n\r\n        );\r\n        Thor thor = new Thor(\r\n                \"Тор\",\r\n                100000,\r\n                LifeStatus.ALIVE,\r\n                3,\r\n                \"В браке с Сиф\",\r\n                \"Гром и молния\",\r\n                GodType.ASGARDS\r\n\r\n        );\r\n        Freyja freyja = new Freyja(\r\n                \"Фрея\",\r\n                100000,\r\n                LifeStatus.ALIVE,\r\n                2,\r\n                \"В браке с Одом\",\r\n                \"Любовь и Урожай\",\r\n                GodType.VANS\r\n        );\r\n\r\n        //monster\r\n        Pudge pudge = new Pudge(\r\n                \"Пудж\",\r\n                15,\r\n                LifeStatus.ALIVE,\r\n                World.ANOTHER,\r\n                10000,\r\n                993.8,\r\n                4\r\n        );\r\n\r\n        //shop\r\n        GnomesShop gnomesShop = new GnomesShop(\r\n                \"Лавка Брока\",\r\n                World.SVARTALHEIM,\r\n                0,\r\n                8,\r\n                18,\r\n                \"Оружие\"\r\n        );\r\n\r\n        //sanctuary\r\n        ElvenSanctuary elvenSanctuary = new ElvenSanctuary(\r\n                \"Святилище светлых эльфов\",\r\n                World.ALFHEIM,\r\n                0,\r\n                \"Молитва к Свету\",\r\n                \"Не молиться Тьме\"\r\n        );\r\n\r\n        System.out.println(\"Однажды между \"\r\n                + pudge.getPudgeName()\r\n                + \"ом и \"\r\n                + gojoSatoru.getGojoSatoruName()\r\n                + \" произошла легендарная битва...\");\r\n\r\n        pudge.PudgeIsHungry();\r\n        gojoSatoru.useCharm();\r\n        pudge.hungerLevelTooHigh();\r\n\r\n        System.out.println(piglet.getPigletName()\r\n                + \" крайне испугался боя, \"\r\n                + \"поэтому \"\r\n                + winnieThePooh.getWinniesName()\r\n                + \" и его друзья решили бежать в \"\r\n                + elvenSanctuary.getSanctuaryName());\r\n\r\n        System.out.println(\"Однако внезапно перед ними оказался выскокий выступ\"\r\n                + \" и все покатились со склона, превратишвшись в кучу мала\");\r\n\r\n        System.out.println(\"Первым пришел в себя и поднялся\"\r\n                + christopherRobin.getChristopherRobinName()\r\n                + \". После он начала помогать своим друзьям\"\r\n                );\r\n\r\n        christopherRobin.riseSomeoneUp(winnieThePooh.getWinniesName(), 40.7);\r\n        winnieThePooh.riseSomeoneUp(piglet.getPigletName(), 25.3);\r\n        piglet.riseSomeoneUp(tigger.getTiggerName(), 36.1);\r\n\r\n        System.out.println(\"После вместе они достигли\"\r\n                + elvenSanctuary.getSanctuaryName()\r\n                + \" и спаслись!\"\r\n                + \" а теперь вернемся к бою...\"\r\n        );\r\n\r\n        System.out.println(gojoSatoru.getGojoSatoruName()\r\n                + \" наиспользует последнню атаку...\");\r\n\r\n        gojoSatoru.usePurple();\r\n        System.out.println(\"И победителем, как всегда, \"\r\n                + gojoSatoru.getGojoSatoruName());\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mythology/src/Mythology.java b/Mythology/src/Mythology.java
+--- a/Mythology/src/Mythology.java	(revision 18882aaaa68fe2d1a2ae726e2ebd6ea7555e5c27)
++++ b/Mythology/src/Mythology.java	(date 1734709941151)
+@@ -25,8 +25,6 @@
+     private static final Logger logger = LogManager.getLogger(Mythology.class);
+ 
+     public static void main(String[] args) throws PlaceIsToHighExeption {
+-
+-
+         System.setOut(new PrintStream(System.out) {
+             @Override
+             public void println(String s) {
+Index: Mythology/src/log4j2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Configuration status=\"WARN\">\r\n    <Appenders>\r\n        <Console name=\"Console\" target=\"SYSTEM_OUT\">\r\n            <PatternLayout pattern=\"%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n\" />\r\n        </Console>\r\n\r\n        <File name=\"File\" fileName=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\logs\\app.log\" append=\"true\">\r\n            <PatternLayout pattern=\"%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n\" />\r\n        </File>\r\n    </Appenders>\r\n\r\n    <Loggers>\r\n\\        <Root level=\"info\">\r\n            <AppenderRef ref=\"Console\" />\r\n            <AppenderRef ref=\"File\" />\r\n        </Root>\r\n    </Loggers>\r\n</Configuration>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Mythology/src/log4j2.xml b/Mythology/src/log4j2.xml
+--- a/Mythology/src/log4j2.xml	(revision 18882aaaa68fe2d1a2ae726e2ebd6ea7555e5c27)
++++ b/Mythology/src/log4j2.xml	(date 1737296627363)
+@@ -11,7 +11,7 @@
+     </Appenders>
+ 
+     <Loggers>
+-\        <Root level="info">
++        <Root level="info">
+             <AppenderRef ref="Console" />
+             <AppenderRef ref="File" />
+         </Root>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7d9bde71-a7ed-4ff0-b40d-6575ac1702bd\" name=\"Changes\" comment=\"lab3-4\">\r\n      <change afterPath=\"$PROJECT_DIR$/Client/A.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Client/src/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Client/src/Client.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Mythology/src/IMythology.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Mythology/src/IMythology.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Mythology/src/Mythology.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Mythology/src/Mythology.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Server/src/ClientHandler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Server/src/ClientHandler.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Server/src/Server.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Server/src/Server.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/text.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/text.txt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Record\" />\r\n        <option value=\"Exception\" />\r\n        <option value=\"Enum\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Naswek&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Naswek/lab3-4.git&quot;,\r\n    &quot;accountId&quot;: &quot;3346c5b2-994e-482f-b0c8-68059b24a48b&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2oypWElsAjKN2yBe3ZLtXbr4z2g\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.Client (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Client.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Mythology.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Server.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Downloads/apache-log4j-2.24.2-bin&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/lab3-4/Client/Mythology/src/Main.java&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\Client\\Mythology\\src\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\Client\\Mythology\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\Client\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\src\" />\r\n      <recent name=\"C:\\Users\\user\\IdeaProjects\\lab3-4\\src\\main\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Client\">\r\n    <configuration name=\"Client (1)\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Client\" />\r\n      <module name=\"Client\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Client\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Client\" />\r\n      <module name=\"Client\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Mythology\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Mythology\" />\r\n      <module name=\"Mythology\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Server\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Server\" />\r\n      <module name=\"Server\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Client (1)\" />\r\n      <item itemvalue=\"Application.Client\" />\r\n      <item itemvalue=\"Application.Mythology\" />\r\n      <item itemvalue=\"Application.Server\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Client\" />\r\n        <item itemvalue=\"Application.Server\" />\r\n        <item itemvalue=\"Application.Mythology\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7d9bde71-a7ed-4ff0-b40d-6575ac1702bd\" name=\"Changes\" comment=\"\" />\r\n      <created>1731851703280</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1731851703280</updated>\r\n      <workItem from=\"1731851704477\" duration=\"121000\" />\r\n      <workItem from=\"1731851832830\" duration=\"385000\" />\r\n      <workItem from=\"1732115719452\" duration=\"17000\" />\r\n      <workItem from=\"1732198498613\" duration=\"40674000\" />\r\n      <workItem from=\"1732282792570\" duration=\"1001000\" />\r\n      <workItem from=\"1732284176690\" duration=\"2139000\" />\r\n      <workItem from=\"1732288161840\" duration=\"14457000\" />\r\n      <workItem from=\"1732397321228\" duration=\"2000\" />\r\n      <workItem from=\"1732471366321\" duration=\"98000\" />\r\n      <workItem from=\"1732727655587\" duration=\"879000\" />\r\n      <workItem from=\"1732740300278\" duration=\"170000\" />\r\n      <workItem from=\"1732809649096\" duration=\"1135000\" />\r\n      <workItem from=\"1732826188841\" duration=\"2582000\" />\r\n      <workItem from=\"1732883729908\" duration=\"4351000\" />\r\n      <workItem from=\"1733077647783\" duration=\"3000\" />\r\n      <workItem from=\"1733077770683\" duration=\"4000\" />\r\n      <workItem from=\"1733158724724\" duration=\"2222000\" />\r\n      <workItem from=\"1733161532803\" duration=\"11986000\" />\r\n      <workItem from=\"1733203948012\" duration=\"3791000\" />\r\n      <workItem from=\"1733209139890\" duration=\"3330000\" />\r\n      <workItem from=\"1733234737377\" duration=\"8659000\" />\r\n      <workItem from=\"1733427073335\" duration=\"14496000\" />\r\n      <workItem from=\"1733469116332\" duration=\"31292000\" />\r\n      <workItem from=\"1733583474573\" duration=\"463000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731851759710</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731851759710</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1731851871117</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1731851871117</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732295364232</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732295364232</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732296342865</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732296342865</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732386391091</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732386391091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1732727873829</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1732727873829</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733491994381</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733491994381</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733492133582</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733492133582</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"lab3-4\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733492466723</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733492466723</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"lab3-4\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"lab3-4\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.net.SocketException\" package=\"java.net\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/maven/src/main/java/org/example/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/untitled/src/main/java/org/example/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/Client/Mythology/src/main/java/org/example/Main.java</url>\r\n          <line>13</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/Client/Mythology/src/Main.java</url>\r\n          <line>11</line>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/lab3_4$Client.ic\" NAME=\"Client Coverage Results\" MODIFIED=\"1733477102811\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 18882aaaa68fe2d1a2ae726e2ebd6ea7555e5c27)
++++ b/.idea/workspace.xml	(date 1737296788813)
+@@ -5,15 +5,10 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="7d9bde71-a7ed-4ff0-b40d-6575ac1702bd" name="Changes" comment="lab3-4">
+-      <change afterPath="$PROJECT_DIR$/Client/A.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/Client.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Mythology/src/IMythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/IMythology.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Mythology/src/Mythology.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/Mythology.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/place/shop/GnomesShop.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Server/src/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/ClientHandler.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Mythology/src/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mythology/src/log4j2.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -91,7 +86,7 @@
+       <recent name="C:\Users\user\IdeaProjects\lab3-4\src\main\resources" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Client">
++  <component name="RunManager" selected="Application.Mythology">
+     <configuration name="Client (1)" type="Application" factoryName="Application">
+       <option name="MAIN_CLASS_NAME" value="Client" />
+       <module name="Client" />
+@@ -128,9 +123,9 @@
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.Mythology" />
+         <item itemvalue="Application.Client" />
+         <item itemvalue="Application.Server" />
+-        <item itemvalue="Application.Mythology" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -174,6 +169,16 @@
+       <workItem from="1733427073335" duration="14496000" />
+       <workItem from="1733469116332" duration="31292000" />
+       <workItem from="1733583474573" duration="463000" />
++      <workItem from="1733584150580" duration="180000" />
++      <workItem from="1733894573172" duration="38000" />
++      <workItem from="1733895066296" duration="8000" />
++      <workItem from="1734518522193" duration="153000" />
++      <workItem from="1734518763446" duration="549000" />
++      <workItem from="1734704894036" duration="1067000" />
++      <workItem from="1734709564471" duration="375000" />
++      <workItem from="1736121788427" duration="6000" />
++      <workItem from="1736844473330" duration="624000" />
++      <workItem from="1737296440497" duration="346000" />
+     </task>
+     <task id="LOCAL-00001" summary="lab3-4">
+       <option name="closed" value="true" />
+@@ -247,11 +252,30 @@
+       <option name="project" value="LOCAL" />
+       <updated>1733492466723</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="lab3-4">
++      <option name="closed" value="true" />
++      <created>1733584319325</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1733584319325</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="lab3-4" />
